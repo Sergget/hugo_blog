@@ -1,0 +1,133 @@
+baseURL: "http://localhost:1313/"
+locale: zh-cn
+title: Sergio7的博客
+
+theme: hugo-theme-stack
+
+# 中文内容需要开启，Summary/字数统计才会按 CJK 规则正确切分
+hasCJKLanguage: true
+DefaultContentLanguage: zh-cn
+
+pagination:
+  pagerSize: 10
+
+params:
+  mainSections:
+    - posts
+
+  # 站点图标：v4 版本图标从 assets 目录读取（不是 static），
+  # 把文件放到 assets/favicon.ico，这里保持文件名一致
+  favicon: favicon.png
+
+  footer:
+    since: 2020          # TODO: 改成你博客真正开始的年份，页脚会显示 "2020 - 2026"
+    customText: ""       # 可选，页脚追加的一行文字，比如备案号
+
+  dateFormat:
+    published: 2006-01-02
+    lastUpdated: 2006-01-02 15:04
+
+  # ------- 侧边栏：这里就是站点级的"个人简介" -------
+  sidebar:
+    emoji: 🌱                      # TODO: 换成你喜欢的 emoji，会显示在头像上方
+    subtitle: "折腾服务器、写代码、记录生活"   # TODO: 一句话简介，替换成你自己的
+    avatar: img/avatar.png       # v4 版本 avatar 直接是字符串路径。把头像放到 assets/img/avatar.png
+
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: false            # 如果想给文章加统一版权声明，改成 true 并填 default
+      default: "本文采用 CC BY-NC-SA 4.0 许可协议，转载请注明出处"
+
+  # 评论系统默认关闭，想开启的话把 enabled 改成 true，再选一个 provider 填对应字段
+  # 可选 provider: disqus / disqusjs / utterances / remark42 / vssue / waline / twikoo / cactus / giscus / gitalk / cusdis
+  comments:
+    enabled: false
+    provider: waline
+    waline:
+      serverURL: ""             # TODO: 自建 waline 服务地址，比如 https://waline.sergget.qzz.io
+
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
+      - type: categories
+        params:
+          limit: 10
+      - type: tag-cloud
+        params:
+          limit: 20
+    page:
+      - type: toc
+
+  opengraph:
+    twitter:
+      site: ""
+      card: summary_large_image
+
+  colorScheme:
+    toggle: true
+    default: auto
+
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+
+# ------- 导航栏 & 自定义链接 -------
+# main 里既可以放"页面"（配合 content/page/ 下的 About / Archives / Search，见下方说明），
+# 也可以直接放外部链接，比如下面这两个例子；改 name/url/params.icon 即可增删。
+# icon 名字对应 assets/icons/ 目录下的 svg 文件名（主题自带一批，比如 brand-github、link）
+menu:
+  main:
+    - identifier: services
+      name: 常用服务
+      url: https://home.sergget.qzz.io/            # TODO: 换成你想放的自定义链接
+      weight: 50
+      params:
+        icon: link
+
+  social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/sergget        # TODO: 换成你的 GitHub 主页
+      params:
+        icon: brand-github
+
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      params:
+        icon: rss
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 200
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  tableOfContents:
+    endLevel: 4
+    ordered: false
+    startLevel: 2
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
