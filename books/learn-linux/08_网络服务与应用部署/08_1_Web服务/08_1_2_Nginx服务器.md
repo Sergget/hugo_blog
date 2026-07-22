@@ -1,4 +1,4 @@
-# 8.1.2 Nginx服务器
+﻿# 8.1.2 Nginx服务器
 
 ## 简介
 
@@ -27,7 +27,7 @@ Nginx可以用过各linux发行版的包管理器安装，也可以自行编译�
 
 - 如果需要运行一个php站点，则还需要增加如下配置：
 
-```conf
+```text
 index index.php
 ```
 
@@ -70,7 +70,7 @@ nginx的配置文件结构与apache类似：
 
 由于ssl证书是和域名绑定在一起的，在一个主机上运行多个域名的站点时就需要为不同的站点分别绑定域名，但即便是在运行单个域名的网站中我们也推荐绑定好域名，在对应的虚拟主机的配置文件下增加：
 
-```conf
+```text
 server{
     server_name Your_domain_Name;
 }
@@ -80,14 +80,14 @@ server{
 
 默认站点配置文件在`/etc/nginx/sites-available/default.conf`中，配置ssl证书路径：
 
-```conf
+```text
 ssl_certificate /var/www/nginx/site.pem;
 ssl_certificate_key /var/www/nginx/site.key;
 ```
 
 然后增加下列配置：
 
-```conf
+```text
 ssl_session_timeout 5m;
 keepalive_timeout 60;
 ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -117,7 +117,7 @@ add_header X-XSS-Protection "1; mode=block" always;
 
 在对应的服务器虚拟主机的配置文件中修改配置：
 
-```conf
+```text
 server {
         listen 80;
         listen [::]:80;
@@ -136,7 +136,7 @@ server {
 
 nginx 配置反向代理非常简单，在对应的服务器配置文件里添加如下配置即可:
 
-```conf
+```text
 location / {
         proxy_pass http://127.0.0.1:8080;
 }

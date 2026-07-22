@@ -1,0 +1,1074 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>4.4 批量添加用户 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.2.2">
+        <meta name="author" content="Sergget">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_5_权限高级管理（ACL、sudo）.html" />
+    
+    
+    <link rel="prev" href="04_3_用户账号相关文件.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1 系统基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_系统基础/01_1_系统启动.html">
+            
+                <a href="../01_系统基础/01_1_系统启动.html">
+            
+                    
+                    1.1 系统启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_系统基础/01_2_系统目录结构.html">
+            
+                <a href="../01_系统基础/01_2_系统目录结构.html">
+            
+                    
+                    1.2 系统目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_系统基础/01_3_系统信息与监控.html">
+            
+                <a href="../01_系统基础/01_3_系统信息与监控.html">
+            
+                    
+                    1.3 系统信息与监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2 文本编辑
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02_文本编辑/02_1_vi_vim编辑器.html">
+            
+                <a href="../02_文本编辑/02_1_vi_vim编辑器.html">
+            
+                    
+                    2.1 Vi/Vim 编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3 文件与存储管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_文件与存储管理/03_1_文件基本属性.html">
+            
+                <a href="../03_文件与存储管理/03_1_文件基本属性.html">
+            
+                    
+                    3.1 文件基本属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_文件与存储管理/03_2_文件与目录管理.html">
+            
+                <a href="../03_文件与存储管理/03_2_文件与目录管理.html">
+            
+                    
+                    3.2 文件与目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03_文件与存储管理/03_3_文件搜索.html">
+            
+                <a href="../03_文件与存储管理/03_3_文件搜索.html">
+            
+                    
+                    3.3 文件搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03_文件与存储管理/03_4_压缩与打包.html">
+            
+                <a href="../03_文件与存储管理/03_4_压缩与打包.html">
+            
+                    
+                    3.4 压缩与打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03_文件与存储管理/03_5_磁盘管理.html">
+            
+                <a href="../03_文件与存储管理/03_5_磁盘管理.html">
+            
+                    
+                    3.5 磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03_文件与存储管理/03_6_磁盘健康测试.html">
+            
+                <a href="../03_文件与存储管理/03_6_磁盘健康测试.html">
+            
+                    
+                    3.6 磁盘性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4 用户与权限管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="04_1_用户管理.html">
+            
+                <a href="04_1_用户管理.html">
+            
+                    
+                    4.1 用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="04_2_用户组管理.html">
+            
+                <a href="04_2_用户组管理.html">
+            
+                    
+                    4.2 用户组管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="04_3_用户账号相关文件.html">
+            
+                <a href="04_3_用户账号相关文件.html">
+            
+                    
+                    4.3 用户账号相关文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="04_4_批量添加用户.html">
+            
+                <a href="04_4_批量添加用户.html">
+            
+                    
+                    4.4 批量添加用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="04_5_权限高级管理（ACL、sudo）.html">
+            
+                <a href="04_5_权限高级管理（ACL、sudo）.html">
+            
+                    
+                    4.5 权限高级管理（ACL、sudo）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5 软件包管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05_软件包管理/05_1_apt_dpkg基础.html">
+            
+                <a href="../05_软件包管理/05_1_apt_dpkg基础.html">
+            
+                    
+                    5.1 apt/dpkg 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05_软件包管理/05_2_snap包管理入门.html">
+            
+                <a href="../05_软件包管理/05_2_snap包管理入门.html">
+            
+                    
+                    5.2 snap包管理入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05_软件包管理/05_3_从源码编译deb包安装.html">
+            
+                <a href="../05_软件包管理/05_3_从源码编译deb包安装.html">
+            
+                    
+                    5.3 从源码编译deb包安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6 进程与服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06_进程与服务管理/06_1_进程管理.html">
+            
+                <a href="../06_进程与服务管理/06_1_进程管理.html">
+            
+                    
+                    6.1 进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06_进程与服务管理/06_2_定时任务.html">
+            
+                <a href="../06_进程与服务管理/06_2_定时任务.html">
+            
+                    
+                    6.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06_进程与服务管理/06_3_systemd与服务管理.html">
+            
+                <a href="../06_进程与服务管理/06_3_systemd与服务管理.html">
+            
+                    
+                    6.3 systemd与服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7 网络管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../07_网络管理/07_1_网络基础.html">
+            
+                <a href="../07_网络管理/07_1_网络基础.html">
+            
+                    
+                    7.1 网络基础（TCP/IP、OSI）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../07_网络管理/07_2_网络配置工具概览.html">
+            
+                <a href="../07_网络管理/07_2_网络配置工具概览.html">
+            
+                    
+                    7.2 网络配置工具概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../07_网络管理/07_3_ifconfig与ip命令详解.html">
+            
+                <a href="../07_网络管理/07_3_ifconfig与ip命令详解.html">
+            
+                    
+                    7.3 ifconfig与ip命令详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../07_网络管理/07_4_netplan管理网络.html">
+            
+                <a href="../07_网络管理/07_4_netplan管理网络.html">
+            
+                    
+                    7.4 netplan管理网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../07_网络管理/07_5_网络工具.html">
+            
+                <a href="../07_网络管理/07_5_网络工具.html">
+            
+                    
+                    7.5 网络工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../07_网络管理/07_6_防火墙与安全.html">
+            
+                <a href="../07_网络管理/07_6_防火墙与安全.html">
+            
+                    
+                    7.6 防火墙与安全（ufw、iptables）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8 网络服务与应用部署
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" >
+            
+                <span>
+            
+                    
+                    8.1 Web 服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../08_网络服务与应用部署/08_1_Web服务/08_1_1_Apache服务器.html">
+            
+                <a href="../08_网络服务与应用部署/08_1_Web服务/08_1_1_Apache服务器.html">
+            
+                    
+                    8.1.1 Apache 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../08_网络服务与应用部署/08_1_Web服务/08_1_2_Nginx服务器.html">
+            
+                <a href="../08_网络服务与应用部署/08_1_Web服务/08_1_2_Nginx服务器.html">
+            
+                    
+                    8.1.2 Nginx 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.3" data-path="../08_网络服务与应用部署/08_1_Web服务/08_1_3_获取SSL证书.html">
+            
+                <a href="../08_网络服务与应用部署/08_1_Web服务/08_1_3_获取SSL证书.html">
+            
+                    
+                    8.1.3 获取 SSL 证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" >
+            
+                <span>
+            
+                    
+                    8.2 文件共享服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../08_网络服务与应用部署/08_2_文件共享服务/08_2_1_FTP服务器（vsftpd）.html">
+            
+                <a href="../08_网络服务与应用部署/08_2_文件共享服务/08_2_1_FTP服务器（vsftpd）.html">
+            
+                    
+                    8.2.1 FTP 服务器（vsftpd）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../08_网络服务与应用部署/08_2_文件共享服务/08_2_2_Samba服务器.html">
+            
+                <a href="../08_网络服务与应用部署/08_2_文件共享服务/08_2_2_Samba服务器.html">
+            
+                    
+                    8.2.2 Samba 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../08_网络服务与应用部署/08_2_文件共享服务/08_2_3_搭建WebDAV服务.html">
+            
+                <a href="../08_网络服务与应用部署/08_2_文件共享服务/08_2_3_搭建WebDAV服务.html">
+            
+                    
+                    8.2.3 搭建 WebDAV 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" >
+            
+                <span>
+            
+                    
+                    8.3 私有云与协作工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../08_网络服务与应用部署/08_3_私有云与协作工具/08_3_1_Nextcloud搭建.html">
+            
+                <a href="../08_网络服务与应用部署/08_3_私有云与协作工具/08_3_1_Nextcloud搭建.html">
+            
+                    
+                    8.3.1 Nextcloud 搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../08_网络服务与应用部署/08_3_私有云与协作工具/08_3_2_为知笔记私有部署.html">
+            
+                <a href="../08_网络服务与应用部署/08_3_私有云与协作工具/08_3_2_为知笔记私有部署.html">
+            
+                    
+                    8.3.2 为知笔记私有部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9 Shell脚本编程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../09_shell/09_1_Shell基础.html">
+            
+                <a href="../09_shell/09_1_Shell基础.html">
+            
+                    
+                    9.1 Shell基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../09_shell/09_2_变量与参数.html">
+            
+                <a href="../09_shell/09_2_变量与参数.html">
+            
+                    
+                    9.2 变量与参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../09_shell/09_3_数组与运算符.html">
+            
+                <a href="../09_shell/09_3_数组与运算符.html">
+            
+                    
+                    9.3 数组与运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../09_shell/09_4_输入输出与重定向.html">
+            
+                <a href="../09_shell/09_4_输入输出与重定向.html">
+            
+                    
+                    9.4 输入输出与重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../09_shell/09_5_条件测试与流程控制.html">
+            
+                <a href="../09_shell/09_5_条件测试与流程控制.html">
+            
+                    
+                    9.5 条件测试与流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../09_shell/09_6_函数与文件包含.html">
+            
+                <a href="../09_shell/09_6_函数与文件包含.html">
+            
+                    
+                    9.6 函数与文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../09_shell/09_7_管道与高级技巧.html">
+            
+                <a href="../09_shell/09_7_管道与高级技巧.html">
+            
+                    
+                    9.7 管道与高级技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.4 批量添加用户</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>﻿# 4.4 批量添加用户
+添加和删除用户对每位Linux系统管理员都是轻而易举的事，比较棘手的是如果要添加几十个、上百个甚至上千个用户时，我们不太可能还使用useradd一个一个地添加，必然要找一种简便的创建大量用户的方法。Linux系统提供了创建大量用户的工具，可以让您立即创建大量用户，方法如下：</p>
+<h2 id="先编辑一个文本用户文件">先编辑一个文本用户文件</h2>
+<p>每一列按照<code>/etc/passwd</code>密码文件的格式书写，要注意每个用户的用户名、UID、宿主目录都不可以相同，其中密码栏可以留做空白或输入x号。一个范例文件user.txt内容如下：</p>
+<pre><code>user001::600:100:user:/home/user001:/bin/bash
+user002::601:100:user:/home/user002:/bin/bash
+user003::602:100:user:/home/user003:/bin/bash
+user004::603:100:user:/home/user004:/bin/bash
+user005::604:100:user:/home/user005:/bin/bash
+user006::605:100:user:/home/user006:/bin/bash
+</code></pre><h2 id="以root身份执行命令">以root身份执行命令</h2>
+<p><code>/usr/sbin/newusers</code>，从刚创建的用户文件user.txt中导入数据，创建用户：</p>
+<pre><code># newusers &lt; user.txt
+</code></pre><p>然后可以执行命令 vim 或 vi <code>/etc/passwd</code> 检查 <code>/etc/passwd</code> 文件是否已经出现这些用户的数据，并且用户的宿主目录是否已经创建。</p>
+<h2 id="执行命令usrsbinpwunconv。">执行命令<code>/usr/sbin/pwunconv</code>。</h2>
+<p>将 <code>/etc/shadow</code> 产生的 shadow 密码解码，然后回写到 <code>/etc/passwd</code> 中，并将<code>/etc/shadow</code>的shadow密码栏删掉。这是为了方便下一步的密码转换工作，即先取消 shadow password 功能。</p>
+<pre><code># pwunconv
+</code></pre><h2 id="44-编辑每个用户的密码对照文件。">4.4 编辑每个用户的密码对照文件。</h2>
+<p>范例文件 passwd.txt 内容如下：</p>
+<pre><code>user001:密码
+user002:密码
+user003:密码
+user004:密码
+user005:密码
+user006:密码
+</code></pre><h2 id="以root身份执行命令-usrsbinchpasswd">以root身份执行命令 <code>/usr/sbin/chpasswd</code></h2>
+<p>创建用户密码，chpasswd 会将经过 <code>/usr/bin/passwd</code> 命令编码过的密码写入 /etc/passwd 的密码栏。</p>
+<pre><code># chpasswd &lt; passwd.txt
+</code></pre><h2 id="确定密码经编码写入etcpasswd的密码栏后。">确定密码经编码写入<code>/etc/passwd</code>的密码栏后。</h2>
+<p>执行命令 <code>/usr/sbin/pwconv</code> 将密码编码为 shadow password，并将结果写入 <code>/etc/shadow</code>。</p>
+<pre><code># pwconv
+</code></pre><p>这样就完成了大量用户的创建了，之后您可以到<code>/home</code>下检查这些用户宿主目录的权限设置是否都正确，并登录验证用户密码是否正确。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04_3_用户账号相关文件.html" class="navigation navigation-prev " aria-label="Previous page: 4.3 用户账号相关文件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_5_权限高级管理（ACL、sudo）.html" class="navigation navigation-next " aria-label="Next page: 4.5 权限高级管理（ACL、sudo）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.4 批量添加用户","level":"1.5.4","depth":2,"next":{"title":"4.5 权限高级管理（ACL、sudo）","level":"1.5.5","depth":2,"path":"04_用户与权限管理/04_5_权限高级管理（ACL、sudo）.md","ref":"04_用户与权限管理/04_5_权限高级管理（ACL、sudo）.md","articles":[]},"previous":{"title":"4.3 用户账号相关文件","level":"1.5.3","depth":2,"path":"04_用户与权限管理/04_3_用户账号相关文件.md","ref":"04_用户与权限管理/04_3_用户账号相关文件.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Sergget","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"embedFonts":false,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"yahei consolas hybrid","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"04_用户与权限管理/04_4_批量添加用户.md","mtime":"2026-07-22T09:08:55.055Z","type":"markdown"},"gitbook":{"version":"6.2.2","time":"2026-07-22T09:20:28.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

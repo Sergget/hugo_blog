@@ -1,4 +1,4 @@
-# 8.2.1 FTP 服务器（vsftpd）
+﻿# 8.2.1 FTP 服务器（vsftpd）
 本节以 `vsftpd`（Very Secure FTP Daemon）为例，介绍如何快速在 Debian/Ubuntu 系统上搭建一个轻量且安全的 FTP 服务，适合用于文件临时共享与学习环境。内容保持简单，便于练习和理解基本概念。
 
 ## 1 安装

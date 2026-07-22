@@ -1,4 +1,4 @@
-# 7.3 ifconfig与ip命令详解
+﻿# 7.3 ifconfig与ip命令详解
 
 ## 7.3.1 引言
 ifconfig 是传统的网络接口配置工具，属于 net-tools 包，自 Linux ## 7.3.2 内核后已停止维护。现代 Linux 系统推荐使用 ip 命令（来自 iproute2 包），它功能更全面，输出更清晰。

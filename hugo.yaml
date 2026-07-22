@@ -99,7 +99,11 @@ menu:
       weight: 20
       params:
         icon: calendar-heart  # 新增图标，没有的话可以换成 notebook / mood-smile
-
+    - name: 书籍
+      url: /books/
+      weight: 30
+      params:
+        icon: books
     - identifier: services
       name: 常用服务
       url: https://home.sergget.qzz.io/            # TODO: 换成你想放的自定义链接

@@ -1,0 +1,1229 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>8.1.1 Apache 服务器 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.2.2">
+        <meta name="author" content="Sergget">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08_1_2_Nginx服务器.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1 系统基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../01_系统基础/01_1_系统启动.html">
+            
+                <a href="../../01_系统基础/01_1_系统启动.html">
+            
+                    
+                    1.1 系统启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../01_系统基础/01_2_系统目录结构.html">
+            
+                <a href="../../01_系统基础/01_2_系统目录结构.html">
+            
+                    
+                    1.2 系统目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../01_系统基础/01_3_系统信息与监控.html">
+            
+                <a href="../../01_系统基础/01_3_系统信息与监控.html">
+            
+                    
+                    1.3 系统信息与监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2 文本编辑
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../02_文本编辑/02_1_vi_vim编辑器.html">
+            
+                <a href="../../02_文本编辑/02_1_vi_vim编辑器.html">
+            
+                    
+                    2.1 Vi/Vim 编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3 文件与存储管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../03_文件与存储管理/03_1_文件基本属性.html">
+            
+                <a href="../../03_文件与存储管理/03_1_文件基本属性.html">
+            
+                    
+                    3.1 文件基本属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../03_文件与存储管理/03_2_文件与目录管理.html">
+            
+                <a href="../../03_文件与存储管理/03_2_文件与目录管理.html">
+            
+                    
+                    3.2 文件与目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../03_文件与存储管理/03_3_文件搜索.html">
+            
+                <a href="../../03_文件与存储管理/03_3_文件搜索.html">
+            
+                    
+                    3.3 文件搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../03_文件与存储管理/03_4_压缩与打包.html">
+            
+                <a href="../../03_文件与存储管理/03_4_压缩与打包.html">
+            
+                    
+                    3.4 压缩与打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../03_文件与存储管理/03_5_磁盘管理.html">
+            
+                <a href="../../03_文件与存储管理/03_5_磁盘管理.html">
+            
+                    
+                    3.5 磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../03_文件与存储管理/03_6_磁盘健康测试.html">
+            
+                <a href="../../03_文件与存储管理/03_6_磁盘健康测试.html">
+            
+                    
+                    3.6 磁盘性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4 用户与权限管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../04_用户与权限管理/04_1_用户管理.html">
+            
+                <a href="../../04_用户与权限管理/04_1_用户管理.html">
+            
+                    
+                    4.1 用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../04_用户与权限管理/04_2_用户组管理.html">
+            
+                <a href="../../04_用户与权限管理/04_2_用户组管理.html">
+            
+                    
+                    4.2 用户组管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../04_用户与权限管理/04_3_用户账号相关文件.html">
+            
+                <a href="../../04_用户与权限管理/04_3_用户账号相关文件.html">
+            
+                    
+                    4.3 用户账号相关文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../04_用户与权限管理/04_4_批量添加用户.html">
+            
+                <a href="../../04_用户与权限管理/04_4_批量添加用户.html">
+            
+                    
+                    4.4 批量添加用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../04_用户与权限管理/04_5_权限高级管理（ACL、sudo）.html">
+            
+                <a href="../../04_用户与权限管理/04_5_权限高级管理（ACL、sudo）.html">
+            
+                    
+                    4.5 权限高级管理（ACL、sudo）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5 软件包管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../05_软件包管理/05_1_apt_dpkg基础.html">
+            
+                <a href="../../05_软件包管理/05_1_apt_dpkg基础.html">
+            
+                    
+                    5.1 apt/dpkg 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../05_软件包管理/05_2_snap包管理入门.html">
+            
+                <a href="../../05_软件包管理/05_2_snap包管理入门.html">
+            
+                    
+                    5.2 snap包管理入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../05_软件包管理/05_3_从源码编译deb包安装.html">
+            
+                <a href="../../05_软件包管理/05_3_从源码编译deb包安装.html">
+            
+                    
+                    5.3 从源码编译deb包安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6 进程与服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../06_进程与服务管理/06_1_进程管理.html">
+            
+                <a href="../../06_进程与服务管理/06_1_进程管理.html">
+            
+                    
+                    6.1 进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../06_进程与服务管理/06_2_定时任务.html">
+            
+                <a href="../../06_进程与服务管理/06_2_定时任务.html">
+            
+                    
+                    6.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../06_进程与服务管理/06_3_systemd与服务管理.html">
+            
+                <a href="../../06_进程与服务管理/06_3_systemd与服务管理.html">
+            
+                    
+                    6.3 systemd与服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7 网络管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../07_网络管理/07_1_网络基础.html">
+            
+                <a href="../../07_网络管理/07_1_网络基础.html">
+            
+                    
+                    7.1 网络基础（TCP/IP、OSI）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../07_网络管理/07_2_网络配置工具概览.html">
+            
+                <a href="../../07_网络管理/07_2_网络配置工具概览.html">
+            
+                    
+                    7.2 网络配置工具概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../07_网络管理/07_3_ifconfig与ip命令详解.html">
+            
+                <a href="../../07_网络管理/07_3_ifconfig与ip命令详解.html">
+            
+                    
+                    7.3 ifconfig与ip命令详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../07_网络管理/07_4_netplan管理网络.html">
+            
+                <a href="../../07_网络管理/07_4_netplan管理网络.html">
+            
+                    
+                    7.4 netplan管理网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../07_网络管理/07_5_网络工具.html">
+            
+                <a href="../../07_网络管理/07_5_网络工具.html">
+            
+                    
+                    7.5 网络工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../07_网络管理/07_6_防火墙与安全.html">
+            
+                <a href="../../07_网络管理/07_6_防火墙与安全.html">
+            
+                    
+                    7.6 防火墙与安全（ufw、iptables）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8 网络服务与应用部署
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" >
+            
+                <span>
+            
+                    
+                    8.1 Web 服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.9.1.1" data-path="08_1_1_Apache服务器.html">
+            
+                <a href="08_1_1_Apache服务器.html">
+            
+                    
+                    8.1.1 Apache 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="08_1_2_Nginx服务器.html">
+            
+                <a href="08_1_2_Nginx服务器.html">
+            
+                    
+                    8.1.2 Nginx 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.3" data-path="08_1_3_获取SSL证书.html">
+            
+                <a href="08_1_3_获取SSL证书.html">
+            
+                    
+                    8.1.3 获取 SSL 证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" >
+            
+                <span>
+            
+                    
+                    8.2 文件共享服务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../08_2_文件共享服务/08_2_1_FTP服务器（vsftpd）.html">
+            
+                <a href="../08_2_文件共享服务/08_2_1_FTP服务器（vsftpd）.html">
+            
+                    
+                    8.2.1 FTP 服务器（vsftpd）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../08_2_文件共享服务/08_2_2_Samba服务器.html">
+            
+                <a href="../08_2_文件共享服务/08_2_2_Samba服务器.html">
+            
+                    
+                    8.2.2 Samba 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../08_2_文件共享服务/08_2_3_搭建WebDAV服务.html">
+            
+                <a href="../08_2_文件共享服务/08_2_3_搭建WebDAV服务.html">
+            
+                    
+                    8.2.3 搭建 WebDAV 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" >
+            
+                <span>
+            
+                    
+                    8.3 私有云与协作工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../08_3_私有云与协作工具/08_3_1_Nextcloud搭建.html">
+            
+                <a href="../08_3_私有云与协作工具/08_3_1_Nextcloud搭建.html">
+            
+                    
+                    8.3.1 Nextcloud 搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../08_3_私有云与协作工具/08_3_2_为知笔记私有部署.html">
+            
+                <a href="../08_3_私有云与协作工具/08_3_2_为知笔记私有部署.html">
+            
+                    
+                    8.3.2 为知笔记私有部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9 Shell脚本编程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../09_shell/09_1_Shell基础.html">
+            
+                <a href="../../09_shell/09_1_Shell基础.html">
+            
+                    
+                    9.1 Shell基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../09_shell/09_2_变量与参数.html">
+            
+                <a href="../../09_shell/09_2_变量与参数.html">
+            
+                    
+                    9.2 变量与参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../09_shell/09_3_数组与运算符.html">
+            
+                <a href="../../09_shell/09_3_数组与运算符.html">
+            
+                    
+                    9.3 数组与运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../09_shell/09_4_输入输出与重定向.html">
+            
+                <a href="../../09_shell/09_4_输入输出与重定向.html">
+            
+                    
+                    9.4 输入输出与重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../09_shell/09_5_条件测试与流程控制.html">
+            
+                <a href="../../09_shell/09_5_条件测试与流程控制.html">
+            
+                    
+                    9.5 条件测试与流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../09_shell/09_6_函数与文件包含.html">
+            
+                <a href="../../09_shell/09_6_函数与文件包含.html">
+            
+                    
+                    9.6 函数与文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../09_shell/09_7_管道与高级技巧.html">
+            
+                <a href="../../09_shell/09_7_管道与高级技巧.html">
+            
+                    
+                    9.7 管道与高级技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >8.1.1 Apache 服务器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>﻿# 8.1.1 Apache服务器</p>
+<h2 id="简介">简介</h2>
+<p>Apache是世界使用排名第一的Web服务器软件。它可以运行在几乎所有广泛使用的计算机平台上，由于其跨平台和安全性被广泛使用，是最流行的Web服务器端软件之一。它快速、可靠并且可通过简单的API扩充，将Perl/Python等解释器编译到服务器中。</p>
+<h2 id="安装">安装</h2>
+<p>Linux 平台apache安装非常简单，各个发行版均打包了相应的apache可以直接安装。例如，ubuntu 以下可以直接使用apt进行安装：</p>
+<blockquote>
+<p>sudo apt install apache2</p>
+</blockquote>
+<p>如果没有对应的打包的版本，也可以在官网<a href="http://www.apache.org/dist/httpd/" target="_blank">下载源码包</a>编译安装。</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/httpd
+<span class="hljs-built_in">chmod</span> 740 ./configure
+./configure
+make
+<span class="hljs-built_in">sudo</span> make install
+</code></pre>
+<p><strong>php 站点</strong></p>
+<ul>
+<li><p>如果需要运行一个php站点，则还需要安装以下的包：</p>
+<blockquote>
+<p>sudo apt install php7.2-common libapache2-mod-php7.2 php7.2-cli</p>
+</blockquote>
+</li>
+<li><p>虚拟主机的<code>index</code>属性中增加<code>index.php</code></p>
+</li>
+</ul>
+<p><a href="https://www.php.net/manual/zh/install.unix.debian.php" target="_blank">参考文档</a></p>
+<h2 id="第一个http服务">第一个http服务</h2>
+<p>通过apt安装的apache在安装完成后运行：</p>
+<blockquote>
+<p>sudo service apache2 start</p>
+</blockquote>
+<p>启动apache服务器，然后，在浏览器内输入<a href="http://127.0.0.1" target="_blank">http://127.0.0.1</a>即可访问到网页。</p>
+<p><img src="img/Apache2_01.png" alt="Apache2 It works"></img></p>
+<h2 id="配置文件">配置文件</h2>
+<p>第一个页面会展示apache当前系统下配置文件的位置：</p>
+<pre><code>/etc/apache2/
+|-- apache2.conf
+|       `--  ports.conf
+|-- mods-enabled
+|       |-- *.load
+|       `-- *.conf
+|-- conf-enabled
+|       `-- *.conf
+|-- sites-enabled
+|       `-- *.conf
+</code></pre><ul>
+<li><p>apache将配置分散到各个不同的配置文件中，其中apache2.conf是主配置文件，将各个文件汇总在一起，常规建站请不要修改该配置文件。</p>
+</li>
+<li><p>ports.conf总是被包括在主配置文件中，用于决定监听的端口。</p>
+</li>
+<li><p>在<code>mods-enabled/</code>, <code>conf-enabled/</code> 和 <code>sites-enabled/</code> 目录中的配置文件包含了已经启用的管理模块(module)、全局配置片段(conf)、虚拟主机（sites）等配置。</p>
+<p>  这些配置文件使用软链接创建来自 *-available中的配置文件，模块(mods)、站点(sites)、配置文件(conf)的启用和禁用可以分别使用命令<code>a2enmod</code>、<code>a2dismod</code>、<code>a2ensite</code>、<code>a2dissite</code>、<code>a2enconf</code>、<code>a2disconf</code>命令创建软链接。</p>
+</li>
+<li><p>apache的二进制可执行文件是apache2，位置在<code>/usr/bin/apache2</code>，由于默认配置中使用了系统环境变量，apache2的启动和停止需要启动或停止 <code>/etc/init.d/apache2</code> 或 <code>apache2ctl</code>，直接调用<code>/usr/bin/apache2</code> 不会启用默认的配置文件。</p>
+</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>更改任何一个配置文件后需要重新启动apache服务以使其生效：</p>
+<blockquote>
+<p>sudo service apache2 restart</p>
+</blockquote>
+</li>
+<li><p>推荐在修改任何配置文件前先将原配置备份：</p>
+<blockquote>
+<p>sudo cp <em>.conf </em>.conf.bak</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="站点目录">站点目录</h2>
+<p>默认情况下，ubuntu不允许web浏览器获得<code>/var/www</code>、公共html目录（如果已经启用）、<code>/usr/share</code>（web应用）以外的任何文件的权限。如果你需要使用任何其他位置作为站点的根目录，你需要在<code>/etc/apache2/apache2.conf</code>中将其加入白名单。</p>
+<p>配置文件默认的许可目录如下：</p>
+<pre><code class="lang-xml"># Sets the default security model of the Apache2 HTTPD server. It does
+# not allow access to the root filesystem outside of /usr/share and /var/www.
+# The former is used by web applications packaged in Debian,
+# the latter may be used for local directories served by the web server. If
+# your system is serving content from a sub-directory in /srv you must allow
+# access here, or in any related virtual host.
+<span class="hljs-tag">&lt;<span class="hljs-name">Directory</span> /&gt;</span>
+        Options FollowSymLinks
+        AllowOverride None
+        Require all denied
+<span class="hljs-tag">&lt;/<span class="hljs-name">Directory</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Directory</span> /<span class="hljs-attr">usr</span>/<span class="hljs-attr">share</span>&gt;</span>
+        AllowOverride None
+        Require all granted
+<span class="hljs-tag">&lt;/<span class="hljs-name">Directory</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Directory</span> /<span class="hljs-attr">var</span>/<span class="hljs-attr">www</span>/&gt;</span>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+<span class="hljs-tag">&lt;/<span class="hljs-name">Directory</span>&gt;</span>
+</code></pre>
+<p>如果要新增一个目录，如<code>/srv</code>,添加的代码段如下：</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Directory</span> /<span class="hljs-attr">srv</span>&gt;</span>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+<span class="hljs-tag">&lt;/<span class="hljs-name">Directory</span>&gt;</span>
+</code></pre>
+<p>默认的站点根目录是<code>/var/www/html</code>，你可以在<code>/var/www</code>下创建你自己的虚拟主机站点。</p>
+<p><strong>注意：</strong></p>
+<p>apache 使用www-data用户访问文件和目录</p>
+<h2 id="配置https主机">配置https主机</h2>
+<p>首先需要获得一个ssl证书，证书的获取参考<a href="08_1_3_获取SSL证书.html">此处</a>。得到证书后上传到服务器中一个安全的目录中存放，例如<code>/var/www/cert</code>，推荐禁止www-data对证书目录和文件的写权限。</p>
+<h3 id="域名绑定">域名绑定</h3>
+<p>由于ssl证书是和域名绑定在一起的，在一个主机上运行多个域名的站点时就需要为不同的站点分别绑定域名，但即便是在运行单个域名的网站中我们也推荐绑定好域名，在对应的虚拟主机的配置文件下增加：</p>
+<pre><code class="lang-xml">ServerName Your_domain_Name
+</code></pre>
+<h3 id="使用ssl证书">使用ssl证书</h3>
+<p>默认https站点配置文件在<code>/etc/apache2/sites-available/default-ssl.conf</code>中，ssl证书路径：</p>
+<pre><code class="lang-xml">#   A self-signed (snakeoil) certificate can be created by installing
+#   the ssl-cert package. See
+#   /usr/share/doc/apache2/README.Debian.gz for more info.
+#   If both key and certificate are stored in the same file, only the
+#   SSLCertificateFile directive is needed.
+SSLCertificateFile      /etc/ssl/certs/ssl-cert-snakeoil.pem
+SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+#   Server Certificate Chain:
+#   Point SSLCertificateChainFile at a file containing the
+#   concatenation of PEM encoded CA certificates which form the
+#   certificate chain for the server certificate. Alternatively
+#   the referenced file can be the same as SSLCertificateFile
+#   when the CA certificates are directly appended to the server
+#   certificate for convinience.
+
+SSLCertificateChainFile /etc/apache2/ssl.crt/server-ca.crt
+</code></pre>
+<p>修改<code>SSLCertificateFile</code>、<code>SSLCertificateKeyFile</code>、<code>SSLCertificateChainFile</code> 后的路径分别到对应的下载的ssl证书。</p>
+<p>然后增加下列配置:</p>
+<pre><code class="lang-xml">SSLCipherSuite ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4
+SSLProxyCipherSuite HIGH:MEDIUM:!MD5:!RC4
+SSLHonorCipherOrder on
+SSLProtocol TLSv1 +TLSv1.1 +TLSv1.2
+SSLProxyProtocol all -SSLv3
+</code></pre>
+<p>保存退出后启用apache的ssl模块：</p>
+<blockquote>
+<p>sudo a2enmod ssl</p>
+</blockquote>
+<p>然后重启apache启用https</p>
+<h3 id="强制https访问">强制https访问</h3>
+<p>虽然我们使用了ssl证书对连接进行加密，但是用户仍然可以使用http协议访问到站点，有些比较懒的用户直接输入域名也会默认使用http协议，因此我们需要将所有的http请求转移到443端口使用https：</p>
+<p>在http虚拟主机的配置文件中增加如下配置：</p>
+<pre><code class="lang-xml">RewriteEngine on
+RewriteCond   %{HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+</code></pre>
+<p>保存退出后需启用rewrite模块：</p>
+<blockquote>
+<p>sudo a2enmod rewrite</p>
+</blockquote>
+<p>然后重启apache以启用规则</p>
+<h2 id="反向代理">反向代理</h2>
+<p>反向代理（Reverse Proxy）方式是指以代理服务器来接受Internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给Internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。</p>
+<p><img src="img/reverse_proxy.png" alt=""></img></p>
+<h3 id="子目录反向代理">子目录反向代理</h3>
+<p>如下代码段将本站点下<code>/proxy</code>目录下的请求全部转发至 <code>http://www.real_server.com</code></p>
+<pre><code class="lang-xml">ProxyRequests off
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Proxy</span> /<span class="hljs-attr">proxy</span>&gt;</span>
+    Order deny,allow
+    Allow from all
+<span class="hljs-tag">&lt;/<span class="hljs-name">Proxy</span>&gt;</span>
+ProxyPass /proxy http://www.real_server.com/
+ProxyPassReverse /proxy http://www.real_server.com/
+</code></pre>
+<h3 id="虚拟主机反向代理">虚拟主机反向代理</h3>
+<p>在某些情况下，站点不支持上述的子目录的形式访问，造成静态资源无法访问，或者申请到的ssl证书不支持通配符，需要将某个二级域名的请求转发至其他站点，就需要单独设置一个站点以解析反向代理的需求</p>
+<pre><code class="lang-apache"><span class="hljs-section">&lt;VirtualHost *<span class="hljs-number">:80</span>&gt;</span>
+    <span class="hljs-attribute">ServerAdmin</span> master@localhost
+    <span class="hljs-attribute">ServerName</span> test.server.com
+    <span class="hljs-attribute">ErrorLog</span> logs/dummy-host.example.com-error_log
+    <span class="hljs-attribute">CustomLog</span> logs/dummy-host.example.com-access_log common
+
+    <span class="hljs-attribute">ProxyRequests</span> <span class="hljs-literal">Off</span>
+
+    <span class="hljs-section">&lt;Proxy /&gt;</span>  
+        <span class="hljs-attribute">Order</span> <span class="hljs-literal">deny</span>,<span class="hljs-literal">allow</span>  
+        <span class="hljs-attribute">Allow</span> from <span class="hljs-literal">all</span>  
+    <span class="hljs-section">&lt;/Proxy&gt;</span>  
+    <span class="hljs-attribute">ProxyPass</span> / http://www.real_server.com
+    <span class="hljs-attribute">ProxyPassReverse</span> / http://www.real_server.com
+<span class="hljs-section">&lt;/VirtualHost&gt;</span>
+</code></pre>
+<p>保存退出后，需启用<code>proxy</code>模块，apache2.2以下版本还需要启用<code>htts_proxy</code>:</p>
+<blockquote>
+<p>sudo a2enmod proxy proxy_http</p>
+</blockquote>
+<p>然后重启apache服务使配置生效</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="08_1_2_Nginx服务器.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 8.1.2 Nginx 服务器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8.1.1 Apache 服务器","level":"1.9.1.1","depth":3,"next":{"title":"8.1.2 Nginx 服务器","level":"1.9.1.2","depth":3,"path":"08_网络服务与应用部署/08_1_Web服务/08_1_2_Nginx服务器.md","ref":"08_网络服务与应用部署/08_1_Web服务/08_1_2_Nginx服务器.md","articles":[]},"previous":{"title":"8.1 Web 服务","level":"1.9.1","depth":2,"ref":"","articles":[{"title":"8.1.1 Apache 服务器","level":"1.9.1.1","depth":3,"path":"08_网络服务与应用部署/08_1_Web服务/08_1_1_Apache服务器.md","ref":"08_网络服务与应用部署/08_1_Web服务/08_1_1_Apache服务器.md","articles":[]},{"title":"8.1.2 Nginx 服务器","level":"1.9.1.2","depth":3,"path":"08_网络服务与应用部署/08_1_Web服务/08_1_2_Nginx服务器.md","ref":"08_网络服务与应用部署/08_1_Web服务/08_1_2_Nginx服务器.md","articles":[]},{"title":"8.1.3 获取 SSL 证书","level":"1.9.1.3","depth":3,"path":"08_网络服务与应用部署/08_1_Web服务/08_1_3_获取SSL证书.md","ref":"08_网络服务与应用部署/08_1_Web服务/08_1_3_获取SSL证书.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Sergget","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"embedFonts":false,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"yahei consolas hybrid","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"08_网络服务与应用部署/08_1_Web服务/08_1_1_Apache服务器.md","mtime":"2026-07-22T09:08:55.174Z","type":"markdown"},"gitbook":{"version":"6.2.2","time":"2026-07-22T09:20:28.918Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

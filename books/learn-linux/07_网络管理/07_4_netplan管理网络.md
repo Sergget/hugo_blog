@@ -1,4 +1,4 @@
-# 7.4 netplan 管理网络
+﻿# 7.4 netplan 管理网络
 
 转载自：[https://www.jianshu.com/p/174656635e74](https://www.jianshu.com/p/174656635e74)，**对原文有补充**
 

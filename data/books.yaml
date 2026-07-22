@@ -1,0 +1,6 @@
+- slug: "learn-linux"
+  title: "learn-linux"
+  description: ""
+  icon: "📘"
+  order: 999
+  url: "/books/learn-linux/"

@@ -1,4 +1,4 @@
-# 5.1 apt 与 dpkg 基础教程
+﻿# 5.1 apt 与 dpkg 基础教程
 ## 1. 简介
 在 Ubuntu/Debian 系统中，软件包管理基于 dpkg（底层工具）和 apt（高层前端）。
 

@@ -1,0 +1,51 @@
+{{/*
+  用法一（首页/侧边栏 widget）：在模板里直接
+    {{ partial "books-list.html" . }}
+
+  用法二（普通内容页面）：把同一份代码另存一份到
+    layouts/shortcodes/books-list.html
+  然后在 content/books/_index.md 里写 {{< books-list >}}
+*/}}
+{{ if .Site.Data.books }}
+<div class="books-widget">
+  {{ range .Site.Data.books }}
+  <a class="books-widget__item" href="{{ .url }}">
+    <span class="books-widget__icon">{{ .icon }}</span>
+    <span class="books-widget__body">
+      <span class="books-widget__title">{{ .title }}</span>
+      {{ if .description }}
+      <span class="books-widget__desc">{{ .description }}</span>
+      {{ end }}
+    </span>
+  </a>
+  {{ end }}
+</div>
+{{ else }}
+<p>暂无书籍</p>
+{{ end }}
+
+<style>
+.books-widget {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.books-widget__item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color, #e5e5e5);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.books-widget__item:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  transform: translateY(-2px);
+}
+.books-widget__icon { font-size: 1.8rem; }
+.books-widget__title { display: block; font-weight: 600; }
+.books-widget__desc { display: block; font-size: .85rem; opacity: .7; }
+</style>
