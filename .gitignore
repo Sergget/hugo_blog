@@ -10,3 +10,6 @@
 Thumbs.db
 .vscode/
 .idea/
+
+node_modules/
+books/*/_book/
