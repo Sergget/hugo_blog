@@ -42,7 +42,7 @@ params:
       default: "本文采用 CC BY-NC-SA 4.0 许可协议，转载请注明出处"
 
   # 评论系统默认关闭，想开启的话把 enabled 改成 true，再选一个 provider 填对应字段
-  # 可选 provider: disqus / disqusjs / utterances / remark42 / vssue / waline / twikoo / cactus / giscus / gitalk / cusdis
+  # 可选 provider: disqus / disqusjs / utterances / remark42 / vssue / waline / twikoo / cactus / giscus / gitalk / custom
   comments:
     enabled: false
     provider: waline
@@ -82,28 +82,54 @@ params:
 # ------- 导航栏 & 自定义链接 -------
 # main 里既可以放"页面"（配合 content/page/ 下的 About / Archives / Search，见下方说明），
 # 也可以直接放外部链接，比如下面这两个例子；改 name/url/params.icon 即可增删。
-# icon 名字对应 assets/icons/ 目录下的 svg 文件名（主题自带一批，比如 brand-github、link）
+# icon 名字对应 assets/icons/ 目录下的 svg 文件名（主题自带一批，来自 Tabler Icons，
+# 没有的名字就去 tabler-icons.io 下载同名 svg 放进 assets/icons/）
 menu:
   main:
+    - identifier: home       # 新增：首页入口
+      name: 首页
+      url: /
+      weight: 1
+      params:
+        icon: home
+
+    - identifier: diary
+      name: 杨同初的日常
+      url: /diary/
+      weight: 20
+      params:
+        icon: calendar-heart  # 新增图标，没有的话可以换成 notebook / mood-smile
+
     - identifier: services
       name: 常用服务
       url: https://home.sergget.qzz.io/            # TODO: 换成你想放的自定义链接
       weight: 50
       params:
-        icon: link
+        icon: apps           # 新增图标
+        newTab: true          # 新增：外部链接新标签打开
 
   social:
     - identifier: github
       name: GitHub
       url: https://github.com/sergget        # TODO: 换成你的 GitHub 主页
+      weight: 10
       params:
         icon: brand-github
+        newTab: true
 
-    - identifier: rss
-      name: RSS
-      url: /index.xml
-      params:
-        icon: rss
+    # - identifier: rss
+    #   name: RSS
+    #   url: /index.xml
+    #   weight: 20
+    #   params:
+    #     icon: rss
+
+    # - identifier: email          # 需要就取消注释，填自己的邮箱
+    #   name: Email
+    #   url: mailto:you@example.com
+    #   weight: 30
+    #   params:
+    #     icon: mail
 
 related:
   includeNewer: true

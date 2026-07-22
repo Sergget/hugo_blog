@@ -37,6 +37,7 @@ import frontmatter
 
 EXCLUDE_DIRS = {".obsidian", "secret", "images", "_frontmatter_backup"}
 IMG_LINK_RE = re.compile(r'!\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)')
+H1_RE = re.compile(r'^#\s+(.+?)\s*$', re.MULTILINE)
 
 
 def iter_md_files(vault: Path):
@@ -104,9 +105,15 @@ def needs_rebuild(src_mtime: float, image_paths, dest_md: Path):
 def sync_one(md_path: Path, category: str, vault: Path, content_dir: Path, used_slugs: set):
     post = frontmatter.load(md_path)
 
-    if "title" not in post.metadata or "date" not in post.metadata:
-        print(f"[跳过-缺 title/date] {md_path.relative_to(vault)}")
+    if "date" not in post.metadata:
+        print(f"[跳过-缺 date] {md_path.relative_to(vault)}")
         return "skipped"
+
+    title = post.metadata.get("title")
+    if not title:
+        m = H1_RE.search(post.content)
+        title = m.group(1).strip() if m else md_path.stem
+        print(f"[title 兜底: {title}] {md_path.relative_to(vault)}")
 
     slug = post.metadata.get("slug")
     if not slug:
@@ -145,8 +152,9 @@ def sync_one(md_path: Path, category: str, vault: Path, content_dir: Path, used_
 
     new_post = frontmatter.Post(new_body)
     new_post.metadata = {
-        "title": post.metadata.get("title"),
+        "title": title,
         "date": post.metadata.get("date"),
+        "lastmod": datetime.fromtimestamp(src_mtime),
         "slug": slug,
         "categories": [category],
         "tags": post.metadata.get("tags") or [],
