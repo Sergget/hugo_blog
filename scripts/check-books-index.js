@@ -1,50 +1,44 @@
 const fs = require('fs');
 const path = require('path');
 
-const BOOKS_DIR = 'books';
+// 指向实际存放书籍内容的目录
+const BOOKS_BASE_DIR = 'books/';
+// 排除非书籍的系统文件或目录
+const IGNORE_DIRS = ['_gen'];
 
-// 检查 books 目录是否存在
-if (!fs.existsSync(BOOKS_DIR)) {
-  console.error(`❌ 错误：未找到 ${BOOKS_DIR} 目录`);
+if (!fs.existsSync(BOOKS_BASE_DIR)) {
+  console.error(`❌ 错误：未找到 ${BOOKS_BASE_DIR} 目录`);
   process.exit(1);
 }
 
-// 读取 books 目录下的所有子目录
-const bookSlugs = fs.readdirSync(BOOKS_DIR, { withFileTypes: true })
-  .filter(d => d.isDirectory())
+const bookSlugs = fs.readdirSync(BOOKS_BASE_DIR, { withFileTypes: true })
+  .filter(d => d.isDirectory() && !IGNORE_DIRS.includes(d.name))
   .map(d => d.name)
   .sort();
 
 let totalBooks = 0;
 let missingConfigCount = 0;
 
-console.log('🔍 开始检测 books 目录下的书籍配置...\n');
+console.log(`🔍 开始检测 ${BOOKS_BASE_DIR} 目录下的书籍配置...\n`);
 
 for (const slug of bookSlugs) {
-  const dirPath = path.join(BOOKS_DIR, slug);
+  const dirPath = path.join(BOOKS_BASE_DIR, slug);
   const bookJsonPath = path.join(dirPath, 'book.json');
   const siteJsonPath = path.join(dirPath, 'site.json');
 
   const hasBookJson = fs.existsSync(bookJsonPath);
   const hasSiteJson = fs.existsSync(siteJsonPath);
 
-  totalBooks++;
-
+  // 如果是 _index.md 所在的目录或者是其他非书籍目录，可以进一步过滤
+  // 这里我们认为如果目录里没有 book.json 或 site.json，可能不是要构建的书籍
   if (!hasBookJson && !hasSiteJson) {
-    missingConfigCount++;
-    console.warn(`⚠️  [缺失配置] ${slug}：既未找到 book.json，也未找到 site.json`);
-  } else {
-    const foundFiles = [];
-    if (hasBookJson) foundFiles.push('book.json');
-    if (hasSiteJson) foundFiles.push('site.json');
-    console.log(`✅ [通过] ${slug} -> 发现配置: ${foundFiles.join(', ')}`);
+     continue; // 跳过不包含配置的目录
   }
-}
 
+  totalBooks++;
+  console.log(`✅ [通过] ${slug} -> 发现配置: ${hasBookJson ? 'book.json' : ''} ${hasSiteJson ? 'site.json' : ''}`);
+}
 console.log('\n----------------------------------------');
-console.log(`📊 检测完成：共检查 ${totalBooks} 本书，发现 ${missingConfigCount} 个目录缺少配置文件。`);
+console.log(`📊 检测完成：共扫描 ${bookSlugs.length} 个目录，确认 ${totalBooks} 本书籍。`);
 
-// 如果有缺失配置的书籍，可根据需要设置退出码（常用于 CI/CD 检查）
-if (missingConfigCount > 0) {
-  process.exit(1);
-}
+

@@ -99,8 +99,9 @@ menu:
       weight: 20
       params:
         icon: calendar-heart  # 新增图标，没有的话可以换成 notebook / mood-smile
-    - name: 书籍
-      url: /books/
+    - name: 书籍和服务
+      identifier: resources
+      url: /resources/
       weight: 30
       params:
         icon: books

@@ -1,51 +1,90 @@
-{{/*
-  用法一（首页/侧边栏 widget）：在模板里直接
-    {{ partial "books-list.html" . }}
-
-  用法二（普通内容页面）：把同一份代码另存一份到
-    layouts/shortcodes/books-list.html
-  然后在 content/books/_index.md 里写 {{< books-list >}}
-*/}}
 {{ if .Site.Data.books }}
-<div class="books-widget">
+<div class="books-grid">
   {{ range .Site.Data.books }}
-  <a class="books-widget__item" href="{{ .url }}">
-    <span class="books-widget__icon">{{ .icon }}</span>
-    <span class="books-widget__body">
-      <span class="books-widget__title">{{ .title }}</span>
+  <a class="books-card" href="{{ .url}}" target="_blank" rel="noopener noreferrer">
+    <div class="books-card__icon">
+      {{ if strings.HasPrefix .icon "http" }}
+        <img src="{{ .icon }}" alt="{{ .title }}" loading="lazy">
+{{ else }}
+        <span>{{ .icon }}</span>
+{{ end }}
+    </div>
+    <div class="books-card__body">
+      <span class="books-card__title">{{ .title }}</span>
       {{ if .description }}
-      <span class="books-widget__desc">{{ .description }}</span>
+      <span class="books-card__desc">{{ .description }}</span>
       {{ end }}
-    </span>
+    </div>
   </a>
   {{ end }}
 </div>
 {{ else }}
-<p>暂无书籍</p>
+<p>暂无资源</p>
 {{ end }}
 
 <style>
-.books-widget {
+.books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin: 2rem 0;
 }
-.books-widget__item {
+
+.books-card {
   display: flex;
   align-items: center;
-  gap: .75rem;
-  padding: 1rem;
-  border: 1px solid var(--border-color, #e5e5e5);
-  border-radius: 8px;
+  gap: 1rem;
+  padding: 1.2rem;
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
   text-decoration: none;
-  transition: box-shadow .15s ease, transform .15s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--body-text-color);
 }
-.books-widget__item:hover {
-  box-shadow: 0 2px 10px rgba(0,0,0,.08);
-  transform: translateY(-2px);
+.books-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-l);
 }
-.books-widget__icon { font-size: 1.8rem; }
-.books-widget__title { display: block; font-weight: 600; }
-.books-widget__desc { display: block; font-size: .85rem; opacity: .7; }
+
+.books-card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.books-card__icon img {
+
+
+
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border-color);
+}
+
+.books-card__icon span {
+  font-size: 2rem;
+}
+
+.books-card__title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.books-card__desc {
+  display: block;
+  font-size: 0.95rem; /* 从 0.85rem 增大到 0.95rem */
+  color: var(--secondary-text-color);
+  line-height: 1.5;   /* 适当增大行高，提升易读性 */
+}
 </style>
+
