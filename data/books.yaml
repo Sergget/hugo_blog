@@ -1,11 +1,4 @@
 # data/books.yaml
-- slug: "网络工程师中级"
-  title: "网络工程师中级"
-  description: ""
-  icon: "https://cdn.jsdelivr.net/npm/@mdi/svg/svg/network.svg"
-  order: 999
-  url: "/resources/网络工程师中级/"
-
 - slug: "learn-linux"
   title: "learn-linux"
   description: ""
@@ -13,11 +6,18 @@
   order: 999
   url: "/resources/learn-linux/"
 
+- slug: "网络工程师中级"
+  title: "网络工程师中级"
+  description: ""
+  icon: "https://cdn.jsdelivr.net/npm/@mdi/svg/svg/network.svg"
+  order: 999
+  url: "/resources/网络工程师中级/"
+
 # 以下为从 homepage services 合并的条目（不再分组）
-- title: "Sergio7的博客"
-  description: "个人主页 / 博客"
-  icon: "https://ico.bytecook.io/svg/hugo.svg"
-  url: "https://sergget.qzz.io/"
+- title: "Cloudflare access"
+  description: "Cloudflare access 启动页"
+  icon: "https://ico.bytecook.io/svg/cloudflare.svg"
+  url: "https://sergget.cloudflareaccess.com/"
 
 - title: "远程桌面"
   description: "远程桌面至工作电脑"
@@ -28,11 +28,6 @@
   description: "广告拦截器"
   icon: "https://ico.bytecook.io/svg/adguard-home.svg"
   url: "https://adguard.sergget.qzz.io/"
-
-- title: "Cloudflare access"
-  description: "Cloudflare access 启动页"
-  icon: "https://ico.bytecook.io/svg/cloudflare.svg"
-  url: "https://sergget.cloudflareaccess.com/"
 
 - title: "Immich 相册"
   description: "个人照片云存储"

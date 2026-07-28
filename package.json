@@ -10,6 +10,9 @@
   "scripts": {
     "dev": "node scripts/dev.js",
     "dev:fast": "node scripts/dev.js --skip-books",
+    "build:books": "node scripts/build-books.js",
+    "build:site": "hugo",
+    "build": "npm run build:books && npm run build:site",
     "diary": "node scripts/diary.js",
     "sync": "node scripts/sync.js ../obsidian_vault ./content/posts"
   }
