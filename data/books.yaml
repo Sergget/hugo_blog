@@ -1,6 +1,12 @@
+- slug: "网络工程师中级"
+  title: "网络工程师中级"
+  description: ""
+  icon: "📘"
+  order: 999
+  url: "/books/网络工程师中级/"
 - slug: "learn-linux"
   title: "learn-linux"
   description: ""
-  icon: "📘"
+  icon: "🐧"
   order: 999
   url: "/books/learn-linux/"
