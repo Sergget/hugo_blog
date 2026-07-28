@@ -1,8 +1,16 @@
 {
   "devDependencies": {
+    "fs-extra": "^11.4.0",
+    "gray-matter": "^4.0.3",
     "honkit": "^6"
   },
-  "dependencies": {
+    "dependencies": {
     "honkit-plugin-mermaid-hybrid": "^1.0.2"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:fast": "node scripts/dev.js --skip-books",
+    "diary": "node scripts/diary.js",
+    "sync": "node scripts/sync.js ../obsidian_vault ./content/posts"
   }
 }
