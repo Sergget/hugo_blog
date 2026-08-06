@@ -1,11 +1,12 @@
 ---
+title: 【玩机归档】旧款 OPPO 手机（PBAM00/A5）忘记密码，利用 UnlockTool 强制解锁与避坑指南
+date: '2026-06-24'
+lastmod: '2026-07-21T11:01:50Z'
+slug: 20260624-01
 categories:
 - 玩机折腾
-date: 2026-06-24
-draft: false
-slug: 20260624-01
 tags: []
-title: 【玩机归档】旧款 OPPO 手机（PBAM00/A5）忘记密码，利用 UnlockTool 强制解锁与避坑指南
+draft: false
 ---
 
 在折腾旧手机或进行自动化脚本测试（如 Bing 积分、挂机薅羊毛）时，经常会遇到**手机型号模糊、锁屏密码忘记**的尴尬情况。本文将以一台标有 **PBAM00** 的旧款 OPPO 手机为例，完整记录如何从“盲测型号”到“绕过官方固件限制”，最终利用 **UnlockTool** 成功实现 Factory Reset（恢复出厂设置）与清除 FRP 激活锁的全过程。

@@ -18,7 +18,7 @@
     - `about/`：个人介绍页面。
     - `page/`：站点辅助页面（如归档、搜索）。
 - `assets/`：静态资源（图片、图标、自定义样式）。
-- `scripts/`：用于自动化构建与部署的辅助脚本。
+- `scripts/`：用于自动化构建与部署的辅助脚本。当前脚本已改为 Python 实现，使用 `python scripts/sync.py ...` 和 `python scripts/diary.py` 运行。
 - `hugo.yaml`：站点配置文件。
 
 ## 保持联系

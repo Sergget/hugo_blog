@@ -1,11 +1,12 @@
 ---
+title: Claude Code 免订阅桥接 DeepSeek
+date: '2026-07-13'
+lastmod: '2026-07-21T11:07:38Z'
+slug: 20260713-01
 categories:
 - 来点码吧
-date: 2026-07-13
-draft: false
-slug: 20260713-01
 tags: []
-title: Claude Code 免订阅桥接 DeepSeek
+draft: false
 ---
 
 通过配置系统环境变量，可绕过 Anthropic 官方订阅限制，将 Claude Code 命令行客户端的底层大模型切换为 DeepSeek 引擎。所有请求和扣费均通过个人的 DeepSeek API 账户处理。
